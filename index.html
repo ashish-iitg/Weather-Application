@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>weather App</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* font-family: 'Open Sans', sans-serif; */
+    }
+    body{
+        height: 100vh;
+        background-color: #5297E2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all ease 1.5s;
+    }
+    .panel {
+        display: block;
+        margin: 50px auto;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #246b9a;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 2s ease infinite;
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    .container{
+        display: none;
+        height: 50vh;
+        /* background: red; */
+        width: 70vw;
+        border-radius: 10px;
+    }
+    .city_name{
+        margin: 7vh;
+        /* background: red; */
+        display: flex;
+        width: 40%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 20px;
+        color: white;
+    }
+    .city{
+        padding-top: 20px;
+        font-size: 6vh;
+    }
+    .date{
+        /* transform: translateY(-50%); */
+        padding: 5px;
+        font-size: 4vh;
+    }
+    .temp{
+        padding: 15px 0px;
+        font-size: 10vh;
+        position: relative;
+    }
+    .temp::after{
+        content:'';
+        position: absolute;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        border: 2px solid white;
+        right: -15px;
+        top: 30px;
+    }
+    .feel{
+        font-size: 3vh;
+    }
+    .overview{
+        font-size: 2.5vh;
+    }
+    .box2{
+        background: rgba(255, 255, 255, 0.166);
+        /* -webkit-backdrop-filter: blur(10px); */
+        width:59%;
+        margin: 6px 6px 6px 0px;
+        border-radius: 50px;
+        color: white;
+        font-weight: 400;
+        font-size: 3vh;
+        text-decoration: solid;
+    }
+    .style{
+        display: flex;
+        justify-content: space-between;
+        padding: 3vh 3vh;
+    }
+    .humid::after{
+        content: '%';
+    }
+    .press::after{
+        content: ' mb';
+    }
+    .ws::after{
+        content: ' kph';
+    }
+    .prec::after{
+        content: ' mm';
+    }
+    .vis::after{
+        content: ' m';
+    }
+    
+    .b1{
+        /* boder-radius: 10px 10px 0px 0px; */
+        margin-top: 30px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="panel"></div>
+    <div class="container">
+        <div class="city_name">
+            <div class="city data">Delhi</div>
+            <div class="date data">Friday, 28 July</div>
+            <div class="temp data">
+                24 
+            </div>
+            <div class="feel data">Feels Like </div>
+            <div class="overview data">Humid day</div>
+        </div>
+        <div class="box2" >
+            <div class="b1 style">
+                <div class="name">Humidity</div>
+                <div class="humid data">10</div>
+            </div>
+            <div class="b2 style">
+                <div class="name">Pressure</div>
+                <div class="press data">10</div>
+            </div>
+            <div class="b3 style">
+                <div class="name">wind speed</div>
+                <div class="ws data">10</div>
+            </div>
+            <div class="b5 style">
+                <div class="name">visibility</div>
+                <div class="vis data">10</div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
